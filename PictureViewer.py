@@ -12,14 +12,12 @@ imgpass=tk.StringVar(value='')
 def open_file():
   # ファイルダイアログ
   typ = [('画像ファイル', '*.jpg;*.png;*.bmp;*.gif;*.tiff')]
-  imgpass.set(filedialog.askopenfilenames(filetypes = typ))
+  imgpass.set(filedialog.askopenfilename(filetypes = typ))
   if imgpass.get()=="":
     return 0
   # 表示するイメージを用意
   global img
-  spass=str(imgpass.get())
-  spass=spass[2:len(spass)-3] #謎の文字処理 
-  rimg = Image.open(spass)
+  rimg = Image.open(imgpass.get())
   img = ImageTk.PhotoImage(rimg)
   canvas.create_image(0,0,image=img,tag="illust",anchor=tk.NW)
   # Canvasのスクロール範囲を設定
