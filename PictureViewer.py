@@ -11,7 +11,7 @@ imgpass=tk.StringVar(value='')
 # 画像を表示
 def open_file():
   # ファイルダイアログ
-  typ = [('画像ファイル', '*.jpg;*.jpeg;*.png;*.bmp;*.gif;*.tiff;*.ppm')]
+  typ = [('画像ファイル', '*.jpg;*.jpeg;*.png;*.bmp;*.gif;*.tiff;*.ppm;*.pgm')]
   imgpass.set(filedialog.askopenfilename(filetypes = typ))
   if imgpass.get()=="":
     return 0
