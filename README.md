@@ -1,4 +1,4 @@
-# PythonTikinterPictuerViewer
+# PythonTkinterPictuerViewer
 【Python/Tkinter】画像ファイル閲覧アプリケーション
 
 画像ファイルをメニューからファイルダイアログからファイル選択して表示します<br>
